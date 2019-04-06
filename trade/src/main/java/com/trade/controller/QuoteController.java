@@ -28,16 +28,16 @@ public class QuoteController {
 	//@Autowired
 	private RestTemplate restTemplate=new RestTemplate();
 	
-    @GetMapping("getQuote/{symbol}")	
-	public Quote getQuote(@PathVariable("symbol") String symbol) {
-    	String req_url=url+"&symbol="+symbol+"&apikey="+KEY;
-    	//log.info(req_url);
-    	Quote quote = restTemplate.getForObject(req_url, Quote.class);
-    	log.info(restTemplate.getForObject(req_url, String.class).toString());
-    	log.info(quote.toString());
-    	return quote;
-
-		
-	}
+//    @GetMapping("getQuote/{symbol}")	
+//	public Quote getQuote(@PathVariable("symbol") String symbol) {
+//    	String req_url=url+"&symbol="+symbol+"&apikey="+KEY;
+//    	//log.info(req_url);
+//    	Quote quote = restTemplate.getForObject(req_url, Quote.class);
+//    	log.info(restTemplate.getForObject(req_url, String.class).toString());
+//    	log.info(quote.toString());
+//    	return quote;
+//
+//		
+//	}
 
 }
